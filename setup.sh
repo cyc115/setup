@@ -2,6 +2,11 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
+#install node and others 
+sudo add-apt-repository ppa://chris-lea/nbode.js
+sudo apt-get update
+sudo apt-get install -y make g++ python python-software-properties nodejs
+
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
