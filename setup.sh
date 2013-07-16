@@ -5,7 +5,8 @@
 #install node and others 
 sudo add-apt-repository ppa://chris-lea/nbode.js
 sudo apt-get update
-sudo apt-get install -y make g++ python python-software-properties nodejs
+sudo apt-get install -y make g++ python python-software-properties 
+#sudo apt-get install -y nodejs 
 
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
