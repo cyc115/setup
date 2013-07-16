@@ -1,0 +1,9 @@
+Host myhost
+HostName ec2-54-213-0-159.us-west-2.compute.amazonaws.com
+User ubuntu
+IdentityFile "~/.ssh/SUEmyhost.pem"
+
+Host myhost2
+hostName ec2-54-213-41-86.us-west-2.compute.amazonaws.com
+user ubuntu
+IdentityFile "~/.ssh/SUEmyhost.pem"
