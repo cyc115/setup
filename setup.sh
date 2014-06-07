@@ -8,7 +8,12 @@
 sudo apt-get install -y make g++ python python-software-properties 
 #sudo apt-get install -y nodejs 
 
-# Install nvm: node-version manager
+#install jdk
+add-apt-repository ppa:webupd8team/java
+sudo apt-get update && sudo apt-get install oracle-jdk7-installer
+
+
+#-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
