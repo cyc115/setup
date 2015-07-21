@@ -3,10 +3,10 @@
 # for headless setup. 
 
 #install node and others 
-#sudo add-apt-repository ppa://chris-lea/nbode.js
-#sudo apt-get update
+sudo add-apt-repository ppa://chris-lea/nbode.js
+sudo apt-get update
 sudo apt-get install -y make g++ python python-software-properties 
-#sudo apt-get install -y nodejs 
+sudo apt-get install -y nodejs 
 
 #install jdk
 add-apt-repository ppa:webupd8team/java
