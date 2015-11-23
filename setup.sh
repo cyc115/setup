@@ -3,24 +3,24 @@
 # for headless setup. 
 
 #install node and others 
-sudo add-apt-repository ppa://chris-lea/nbode.js
-add-apt-repository ppa:webupd8team/java
-sudo apt-get update
+#sudo add-apt-repository ppa://chris-lea/nbode.js
+#add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
 
 sudo apt-get install -y make g++ python python-software-properties 
-sudo apt-get install -y nodejs 
+#sudo apt-get install -y nodejs 
 
 #install jdk
-sudo apt-get install -y oracle-java8-installer
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+#sudo apt-get install -y oracle-java8-installer
+#echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 
 #install redshift 
-sudo apt-get install -y redshift redshift-gtk
+#sudo apt-get install -y redshift redshift-gtk
 
 #-version manager
 # https://github.com/creationix/nvm
-sudo apt-get install -y git-core
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+#sudo apt-get install -y git-core
+#curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # Load nvm and install latest production node
 #source $HOME/.nvm/nvm.sh
