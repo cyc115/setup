@@ -2,10 +2,13 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-#install node and others 
-#sudo add-apt-repository ppa://chris-lea/nbode.js
-#add-apt-repository ppa:webupd8team/java
-#sudo apt-get update
+# add 3rd party repositories 
+sudo add-apt-repository ppa://chris-lea/nbode.js
+sudo add-apt-repository ppa:fkrull/deadsnakes  #python
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-add-repository -y ppa:cassou/emacs
+
+sudo apt-get update
 
 sudo apt-get install -y make g++ python python-software-properties 
 #sudo apt-get install -y nodejs 
@@ -35,11 +38,27 @@ sudo apt-get install -y make g++ python python-software-properties
 # See: http://nodejs.org/api/repl.html#repl_repl
 #sudo apt-get install -y rlwrap
 
+
+
+
 # Install emacs24
 # https://launchpad.net/~cassou/+archive/emacs
-sudo apt-add-repository -y ppa:cassou/emacs
-sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
+
+
+#install heroku toolbelt
+#wget -qO- https://toolbelt.heroku.com/install-buntu.sh | sh
+
+
+#install python 3.5
+sudo apt-get install python3.5
+
+
+
+
+
+
+
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -55,8 +74,3 @@ ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
-
-#install heroku toolbelt
-#wget -qO- https://toolbelt.heroku.com/install-buntu.sh | sh
-
-#heroku login
