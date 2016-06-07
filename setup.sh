@@ -4,7 +4,9 @@
 
 #install node and others 
 sudo add-apt-repository ppa://chris-lea/nbode.js
-add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-add-repository -y ppa:cassou/emacs
+
 sudo apt-get update
 
 sudo apt-get install -y make g++ python python-software-properties 
@@ -43,8 +45,7 @@ git config --global credential.helper 'cache --timeout=3600'
 
 # Install emacs24
 # https://launchpad.net/~cassou/+archive/emacs
-sudo apt-add-repository -y ppa:cassou/emacs
-sudo apt-get update
+
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 # git pull and install dotfiles as well
