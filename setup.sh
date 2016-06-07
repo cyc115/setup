@@ -22,6 +22,12 @@ sudo apt-get install -y redshift redshift-gtk
 sudo apt-get install -y git-core
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
+#git setup 
+git config --global user.name "Mike Chen"
+git config --global user.email "yuechuan20@gmail.com"
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
 # Load nvm and install latest production node
 #source $HOME/.nvm/nvm.sh
 #nvm install v0.10.12
