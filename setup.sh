@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #add 3rd party repositories  
-sudo add-apt-repository ppa://chris-lea/nbode.js
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa://chris-lea/nbode.js -y 
+sudo add-apt-repository ppa:webupd8team/java -y 
 sudo apt-add-repository -y ppa:cassou/emacs
 
 #chrome
@@ -11,25 +11,22 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 
 #anaconda for python 3 
 #forget it, they do not provide a secure apt method 
-
 sudo apt-get update
 
-sudo apt-get install -y make g++ python python-software-properties cmake
-sudo apt-get install -y nodejs 
-sudo apt-get install -y google-chrome-stable
+sudo apt-get install -y make g++ cmake
+sudo apt-get install -y nodejs
+sudo apt-get install -y zsh
+sudo apt-get install -y sshpass 
 sudo apt-get install -y tmux
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
-sudo apt-get install -y sshpass 
-sudo apt-get install -y redshift
+
+sudo apt-get install -y google-chrome-stable 
+sudo apt-get install -y redshift 
 
 #install jdk
 sudo apt-get install -y oracle-java8-installer
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 
-#install redshift 
-#sudo apt-get install -y redshift redshift-gtk
-
-#-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
