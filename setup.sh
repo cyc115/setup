@@ -9,7 +9,6 @@ sudo apt-add-repository -y ppa:cassou/emacs
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
-#anaconda for python 3 
 #forget it, they do not provide a secure apt method 
 sudo apt-get update
 
@@ -22,6 +21,15 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 sudo apt-get install -y google-chrome-stable 
 sudo apt-get install -y redshift 
+
+#install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#install anaconda (silent install)
+mkdir ../Download
+wget http://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh -O ../Download/anaconda.sh
+bash ../Download/anaconda.sh -b -p $HOME/anaconda3
+export PATH="$HOME/anaconda3/bin:$PATH"
 
 #install jdk
 sudo apt-get install -y oracle-java8-installer
@@ -49,6 +57,10 @@ git config --global credential.helper 'cache --timeout=3600'
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
 #sudo apt-get install -y rlwrap
+
+
+#anaconda for python 3
+
 
 
 # git pull and install dotfiles as well
