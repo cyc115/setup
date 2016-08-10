@@ -76,6 +76,8 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
+ln -sb dotfiles/.tmux.conf .
+ln -sb dotfiles/.zshrc .
 ln -sf dotfiles/.emacs.d .
 
 #install heroku toolbelt
