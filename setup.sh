@@ -17,7 +17,7 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y zsh
 sudo apt-get install -y sshpass 
 sudo apt-get install -y tmux
-sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
+sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg git-el #for git integration 
 
 sudo apt-get install -y google-chrome-stable 
 sudo apt-get install -y redshift 
