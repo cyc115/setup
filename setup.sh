@@ -3,7 +3,7 @@
 #add 3rd party repositories  
 sudo add-apt-repository ppa://chris-lea/nbode.js -y 
 sudo add-apt-repository ppa:webupd8team/java -y 
-sudo apt-add-repository -y ppa:cassou/emacs
+sudo apt-add-repository -y ppa:cassou/emacs -y
 
 #chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -14,16 +14,12 @@ sudo apt-get update
 
 sudo apt-get install -y make g++ cmake
 sudo apt-get install -y nodejs
-sudo apt-get install -y zsh
 sudo apt-get install -y sshpass 
 sudo apt-get install -y tmux
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg git-el #for git integration 
 
 sudo apt-get install -y google-chrome-stable 
 sudo apt-get install -y redshift 
-
-#install ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #install anaconda (silent install)
 mkdir ../Download
@@ -97,3 +93,7 @@ echo 'set -g status-interval 2' >> .tmux.conf
 echo "set -g status-left \"#S #(tmux-mem-cpu 2 'fg=blue,bg=black,bright')#[default]\"" >> .tmux.conf
 
 
+
+#install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo apt-get install -y zsh
