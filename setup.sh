@@ -20,11 +20,15 @@ sudo apt-get install -y make g++ cmake
 sudo apt-get install -y nodejs npm 
 sudo apt-get install -y sshpass 
 sudo apt-get install -y tmux
-sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg git-el #for git integration 
+sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg git-el #for git integration
+sudo apt-get install -y htop
 # sudo apt-get install -y google-chrome-stable 
 # sudo apt-get install -y redshift 
 # sudo apt-get install -y oracle-java8-installer
 # echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+
+
+
 
 #install anaconda (silent install)
 mkdir ../Download
@@ -64,22 +68,16 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-ln -sb dotfiles/.bashrc_custom .
+ln -sb dotfiles/.zshrc .
 ln -sf dotfiles/.emacs.d .
-
+ln -s /usr/bin/nodejs /usr/bin/node
 
 
 #set up tmux
 
-cd ~/dotfiles/additional/tmux-mem-cpu/
-cmake .
-make
-sudo make install
-cd 
-touch .tmux.conf
-echo 'set -g status-interval 2' >> .tmux.conf
-echo "set -g status-left \"#S #(tmux-mem-cpu 2 'fg=blue,bg=black,bright')#[default]\"" >> .tmux.conf
-
+sudo npm install -g tmux-cpu tmux-mem
+echo "set -g status-right \"#(/usr/local/bin/tmux-cpu)" >> .tmux.conf
+echo "set-option -g status-right '#(/usr/local/bin/tmux-mem --format \":currentBytes [#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]\") #(/usr/local/bin/tmux-cpu --format \":load [#[fg=:color]:spark#[default]] #[fg=:color]:percent#[default]\") %H:%M %d-%b-%y'" >> .tmux.conf
 
 
 #install ohmyzsh
